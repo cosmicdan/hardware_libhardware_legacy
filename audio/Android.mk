@@ -12,6 +12,9 @@ LOCAL_SRC_FILES := \
 
 ifeq ($(BOARD_USES_AUDIO_LEGACY),true)
     LOCAL_CFLAGS += -DUSES_AUDIO_LEGACY
+    # Jellyzeus
+    #LOCAL_CFLAGS += -DICS_AUDIO_BLOB
+    COMMON_GLOBAL_CFLAGS += -DICS_AUDIO_BLOB
 endif
 
 LOCAL_MODULE := libaudiohw_legacy
